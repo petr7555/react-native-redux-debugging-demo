@@ -1,7 +1,6 @@
 if(__DEV__) {
     import('./ReactotronConfig').then(() => console.log('Reactotron Configured'))
 }
-import Reactotron from 'reactotron-react-native'
 
 import { AppRegistry } from 'react-native';
 import React from 'react';
@@ -11,9 +10,7 @@ import { Provider } from 'react-redux';
 
 import configureStore from './store/configureStore';
 
-Reactotron.log('hello rendering world')
-
-const store = configureStore()
+const store = configureStore();
 
 const RNRedux = () => (
   <Provider store = { store }>
