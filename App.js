@@ -18,6 +18,7 @@ let initialList = [
 const Item = ({title}) => (
     <View style={styles.item}>
         <Text style={styles.title}>{title}</Text>
+        <CheckBox/>
     </View>
 );
 
@@ -29,7 +30,10 @@ const App = () => {
     const [list, setList] = useState(initialList);
 
     const onPressFunction = () => {
-        setList(list.slice().reverse());
+        setList([{
+            ...list[0], 
+            data: list[0].data.slice().reverse()
+        }, list[1]]);
     };
 
     return (
@@ -39,12 +43,16 @@ const App = () => {
             </Pressable>
             <SectionList
                 sections={list}
-                keyExtractor={(item, index) => item + index}
+                /**
+                * 'item + index' would not work, 
+                checked checkbox would not be checked anymore, since it was checked for different key
+                * neither default array index would work, the checked checkbox would not move
+                */
+                keyExtractor={(item) => item}
                 renderItem={({item}) => <Item title={item}/>}
                 renderSectionHeader={({section: {title}}) => (
                     <View>
                         <Text style={styles.header}>{title}</Text>
-                        <CheckBox/>
                     </View>
                 )}
             />
