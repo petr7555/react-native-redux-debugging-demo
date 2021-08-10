@@ -3,11 +3,12 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android --verbose",
+    "android": "react-native run-android",
     "test": "jest",
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/checkbox": "^0.5.8",
     "react": "16.8.6",
     "react-native": "0.64",
     "react-redux": "^7.1.0",

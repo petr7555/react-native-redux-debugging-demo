@@ -1,72 +1,74 @@
+import React, { useState } from "react";
+import { StyleSheet, Text, View, SafeAreaView, SectionList, StatusBar, TextInput, Pressable } from "react-native";
+import CheckBox from '@react-native-community/checkbox';
+
+let initialList = [
+    {
+        title: "Main dishes",
+        data: ["Pizza", "Burger", "Risotto"],
+        key: "123"
+    },
+    {
+        title: "Sides",
+        data: ["French Fries", "Onion Rings", "Fried Shrimps"],
+        key: "456"
+    },
+];
+
+const Item = ({title}) => (
+    <View style={styles.item}>
+        <Text style={styles.title}>{title}</Text>
+    </View>
+);
+
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
+ * https://www.robinwieruch.de/react-list-key
+ * 'initialList' without 'key' would not work, since array index would be used by default
  */
+const App = () => {
+    const [list, setList] = useState(initialList);
 
-import React, { Component } from 'react';
-import {
-  StyleSheet,
-  View,
-  Button,
-  Text
-} from 'react-native';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import * as countActions from './actions/counts';
+    const onPressFunction = () => {
+        setList(list.slice().reverse());
+    };
 
-class App extends Component {
-  decrementCount() {
-    let { count, actions } = this.props;
-    count--;
-    actions.changeCount(count);
-  }
-  incrementCount() {
-    let { count, actions } = this.props;
-    count++;
-    actions.changeCount(count);
-  }
-  render() {
-    const { count } = this.props;
     return (
-      <View styles={styles.container}>
-        <Button
-          title="increment"
-          onPress={() => this.incrementCount()}
-        />
-        <Text style={styles.textCenter}>{count}</Text>
-        <Button
-          title="decrement"
-          onPress={() => this.decrementCount()}
-        />
-      </View>
-    );
-  }
+        <SafeAreaView style={styles.container}>
+            <Pressable onPress={onPressFunction}>
+                <Text>Reverse List</Text>
+            </Pressable>
+            <SectionList
+                sections={list}
+                keyExtractor={(item, index) => item + index}
+                renderItem={({item}) => <Item title={item}/>}
+                renderSectionHeader={({section: {title}}) => (
+                    <View>
+                        <Text style={styles.header}>{title}</Text>
+                        <CheckBox/>
+                    </View>
+                )}
+            />
+        </SafeAreaView>);
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  textCenter:{
-    textAlign :'center'
-  }
+    container: {
+        flex: 1,
+        paddingTop: StatusBar.currentHeight,
+        marginHorizontal: 16
+    },
+    item: {
+        backgroundColor: "#f9c2ff",
+        padding: 20,
+        marginVertical: 8
+    },
+    header: {
+        fontSize: 32,
+        backgroundColor: "#fff"
+    },
+    title: {
+        fontSize: 24
+    }
 });
 
-const mapStateToProps = state => ({
-  count: state.count.count,
-});
-
-const ActionCreators = Object.assign(
-  {},
-  countActions,
-);
-const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators(ActionCreators, dispatch),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default App;

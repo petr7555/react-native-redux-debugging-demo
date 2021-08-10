@@ -9,7 +9,7 @@
   dependencies:
     "@babel/highlight" "^7.14.5"
 
-"@babel/core@*", "@babel/core@^7.0.0", "@babel/core@^7.0.0-0", "@babel/core@^7.1.0", "@babel/core@^7.1.6", "@babel/core@^7.5.5":
+"@babel/core@^7.0.0", "@babel/core@^7.1.0", "@babel/core@^7.1.6", "@babel/core@^7.5.5":
   "resolved" "https://registry.yarnpkg.com/@babel/core/-/core-7.5.5.tgz"
   "version" "7.5.5"
   dependencies:
@@ -771,6 +771,11 @@
     "@types/yargs" "^15.0.0"
     "chalk" "^4.0.0"
 
+"@react-native-community/checkbox@^0.5.8":
+  "integrity" "sha512-2ppw40sSqBKSPz75l8rDCvpcvQb/78MtvB5BDtovsJE1kXoUJP4eVLuyLo+LfYdSK9qLD4Llt4bIulr1SI9UIQ=="
+  "resolved" "https://registry.npmjs.org/@react-native-community/checkbox/-/checkbox-0.5.8.tgz"
+  "version" "0.5.8"
+
 "@react-native-community/cli-debugger-ui@^5.0.1":
   "integrity" "sha512-5gGKaaXYOVE423BUqxIfvfAVSj5Cg1cU/TpGbeg/iqpy2CfqyWqJB3tTuVUbOOiOvR5wbU8tti6pIi1pchJ+oA=="
   "resolved" "https://registry.npmjs.org/@react-native-community/cli-debugger-ui/-/cli-debugger-ui-5.0.1.tgz"
@@ -1055,7 +1060,7 @@
     "@typescript-eslint/typescript-estree" "1.13.0"
     "eslint-scope" "^4.0.0"
 
-"@typescript-eslint/parser@^1.5.0", "@typescript-eslint/parser@^1.9.0":
+"@typescript-eslint/parser@^1.5.0":
   "resolved" "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-1.13.0.tgz"
   "version" "1.13.0"
   dependencies:
@@ -1118,13 +1123,13 @@
   "resolved" "https://registry.yarnpkg.com/acorn/-/acorn-5.7.3.tgz"
   "version" "5.7.3"
 
-"acorn@^6.0.0 || ^7.0.0", "acorn@^7.0.0":
-  "resolved" "https://registry.yarnpkg.com/acorn/-/acorn-7.0.0.tgz"
-  "version" "7.0.0"
-
 "acorn@^6.0.1":
   "resolved" "https://registry.yarnpkg.com/acorn/-/acorn-6.3.0.tgz"
   "version" "6.3.0"
+
+"acorn@^7.0.0":
+  "resolved" "https://registry.yarnpkg.com/acorn/-/acorn-7.0.0.tgz"
+  "version" "7.0.0"
 
 "ajv@^6.10.0", "ajv@^6.10.2", "ajv@^6.5.5":
   "resolved" "https://registry.yarnpkg.com/ajv/-/ajv-6.10.2.tgz"
@@ -2183,7 +2188,7 @@
   "resolved" "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.1.0.tgz"
   "version" "1.1.0"
 
-"eslint@*", "eslint@^3.0.0 || ^4.0.0 || ^5.0.0", "eslint@^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0", "eslint@^3.17.0 || ^4 || ^5", "eslint@^5.0.0", "eslint@^6.2.2", "eslint@>= 4.12.1", "eslint@>=2.0.0", "eslint@>=4.19.1", "eslint@>=5":
+"eslint@^6.2.2":
   "resolved" "https://registry.yarnpkg.com/eslint/-/eslint-6.2.2.tgz"
   "version" "6.2.2"
   dependencies:
@@ -3292,7 +3297,7 @@
     "jest-regex-util" "^24.3.0"
     "jest-snapshot" "^24.9.0"
 
-"jest-resolve@*", "jest-resolve@^24.9.0":
+"jest-resolve@^24.9.0":
   "resolved" "https://registry.yarnpkg.com/jest-resolve/-/jest-resolve-24.9.0.tgz"
   "version" "24.9.0"
   dependencies:
@@ -4688,7 +4693,7 @@
   "resolved" "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz"
   "version" "1.1.2"
 
-"prettier@>= 0.11.0", "prettier@1.16.4":
+"prettier@1.16.4":
   "resolved" "https://registry.yarnpkg.com/prettier/-/prettier-1.16.4.tgz"
   "version" "1.16.4"
 
@@ -4845,7 +4850,7 @@
   "resolved" "https://registry.npmjs.org/react-native-flipper/-/react-native-flipper-0.34.0.tgz"
   "version" "0.34.0"
 
-"react-native@^0.62.0", "react-native@>=0.40.0", "react-native@>=0.64.0-rc.0 || 0.0.0-*", "react-native@0.64":
+"react-native@0.64":
   "integrity" "sha512-Ty/fFHld9DcYsFZujXYdeVjEhvSeQcwuTGXezyoOkxfiGEGrpL/uwUZvMzwShnU4zbbTKDu2PAm/uwuOittRGA=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.64.2.tgz"
   "version" "0.64.2"
@@ -4907,7 +4912,7 @@
     "react-is" "^16.8.6"
     "scheduler" "^0.13.6"
 
-"react@^15.2.1 || 16.0.0-alpha.6 || 16.0.0-alpha.12 || 16.0.0-beta.5 || ^16.0.0", "react@^16.0.0", "react@^16.8.0 || ^17.0.0", "react@^16.8.1", "react@^16.8.3", "react@16.8.6", "react@17.0.1":
+"react@16.8.6":
   "resolved" "https://registry.yarnpkg.com/react/-/react-16.8.6.tgz"
   "version" "16.8.6"
   dependencies:
@@ -4916,7 +4921,7 @@
     "prop-types" "^15.6.2"
     "scheduler" "^0.13.6"
 
-"reactotron-core-client@^2.5.0", "reactotron-core-client@2.8.10":
+"reactotron-core-client@2.8.10":
   "integrity" "sha512-SYRO4OCutJzfWMnaULUGVyETZnMDCU5ECNflXyM3Z5Gnfxp/wV6d7jYonhfxHdpU/aGb4Eg15C22myOCXSu6HQ=="
   "resolved" "https://registry.npmjs.org/reactotron-core-client/-/reactotron-core-client-2.8.10.tgz"
   "version" "2.8.10"
@@ -5027,7 +5032,7 @@
     "lodash" "^4.17.19"
     "symbol-observable" "^1.2.0"
 
-"redux@^2.0.0 || ^3.0.0 || ^4.0.0-0", "redux@^3.1.0 || ^4.0.0", "redux@^3.4.0 || ^4.0.0", "redux@^4.0.1", "redux@^4.0.4":
+"redux@^4.0.4":
   "resolved" "https://registry.yarnpkg.com/redux/-/redux-4.0.4.tgz"
   "version" "4.0.4"
   dependencies:
@@ -5131,7 +5136,7 @@
     "stealthy-require" "^1.1.1"
     "tough-cookie" "^2.3.3"
 
-"request@^2.34", "request@^2.87.0":
+"request@^2.87.0":
   "resolved" "https://registry.yarnpkg.com/request/-/request-2.88.0.tgz"
   "version" "2.88.0"
   dependencies:
